@@ -5,9 +5,13 @@ The process works like this:
 1. Convert entire topology into a sparse matrix
 
 You need a list of all AS relationships (p2p = peer to peer, p2c = provider to customer) in the following form:
+
 28917	61316	p2p
+
 25818	8513	p2c
+
 ...
+
 So in this example, the ASes 28917 and 61316 have a peer to peer relationship.
 
 We used the relationships on: https://raw.githubusercontent.com/sbunrg/Astoria/master/bgp_sim/Cyclops_caida_cons.txt
@@ -29,7 +33,7 @@ NOTE:
 
 This implementation does not use cluster computing although that is highly recommended. In our paper that is currently being reviewed, we make use of GridEngine to compute routing trees and paths in parallel. In addition, we store statistics on the time and depths of routing trees on MongoDB. 
 
-A great chunk of time will probably be spent on computing routing trees. Fortunately, we have provided over 50K routing trees for download at ???
+A great chunk of time will probably be spent on computing routing trees. Fortunately, we have provided over 50K routing trees for download at TBD
 
 Please direct questions to cynthiaw2004@gmail.com
 
