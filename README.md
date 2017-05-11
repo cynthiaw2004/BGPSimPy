@@ -37,7 +37,7 @@ This implementation does not use cluster computing although that is highly recom
 
 A great chunk of time will probably be spent on computing routing trees. Fortunately, we have provided over 50K routing trees for download at: 
 
-http://www.cs.unm.edu/~freemanc/
+http://www.cs.unm.edu/~freemanc/bgpsimpy/
 
 Please direct questions to cynthiaw2004@gmail.com
 
