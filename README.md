@@ -1,4 +1,4 @@
-Studying the interdomain routing system can be a difficult problem due to the size and complexity of the autonomous system (AS) topology. In Phillipa Gill's paper Modeling on Quicksand, the authors developed a fast algorithm called BGPSim that simulates the likely paths taken from a source AS to a destination AS. BGPSim creates a unique subgraph for every AS y, called a routing tree. Paths from any AS x to AS y can then be found using the routing tree for AS y. Unfortunately, the authors' implementation depends on deprecated software (DryadLinq), and ouput paths are unordered. We reimplement their algorithm in Python called BGPSimPy which is open-sourced and also provide routing trees for over 50,000 ASes online. As computing all routing trees was a computationally intensive task that took approximately 10 days over six servers, it is our hope that providing this resource freely online encourages future works that rely extensively on modeling and simulating the Internet's interdomain routing system. 
+Studying the interdomain routing system can be a difficult problem due to the size and complexity of the autonomous system (AS) topology. In Phillipa Gill's paper Modeling on Quicksand, the authors developed an algorithm called BGPSim that simulates the likely paths taken from a source AS to a destination AS. BGPSim creates a unique subgraph for every AS y, called a routing tree. Paths from any AS x to AS y can then be found using the routing tree for AS y. Unfortunately, the authors' implementation depends on deprecated software (DryadLinq), and ouput paths are unordered. We reimplement their algorithm in Python called BGPSimPy which is open-sourced and also provide routing trees for over 50,000 ASes online. As computing all routing trees was a computationally intensive task that took approximately 10 days over six servers, it is our hope that providing this resource freely online encourages future works that rely extensively on modeling and simulating the Internet's interdomain routing system. 
 
 The process works like this:
 
@@ -31,9 +31,13 @@ Now that you have the appropriate routing tree, you can find the path from AS 12
 
 NOTE:
 
-This implementation does not use cluster computing although that is highly recommended. In our paper that is currently being reviewed, we make use of GridEngine to compute routing trees and paths in parallel. In addition, we store statistics on the time and depths of routing trees on MongoDB. 
+Like the original implementation of BGPSim (https://github.com/sbunrg/Astoria), we follow the principles of the CRAPL licence and take no responsibility for any thing that might happen to you or your system.
 
-A great chunk of time will probably be spent on computing routing trees. Fortunately, we have provided over 50K routing trees for download at TBD
+This implementation does not use cluster computing although that is highly recommended. In our paper that is currently being reviewed, we make use of Grid Engine to compute routing trees and paths in parallel. In addition, we store statistics on the time and depths of routing trees on MongoDB. 
+
+A great chunk of time will probably be spent on computing routing trees. Fortunately, we have provided over 50K routing trees for download at: 
+
+http://www.cs.unm.edu/~freemanc/
 
 Please direct questions to cynthiaw2004@gmail.com
 
